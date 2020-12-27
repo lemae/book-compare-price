@@ -1,0 +1,11 @@
+.book{
+	padding: 1rem;
+}
+.card-title{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow : clip;
+}
+img{
+	max-height: 243px;
+}

@@ -24,7 +24,7 @@ class DangdangSpider:
         content_list = list()
         for li in li_list:  # 遍历每个商品
             book = dict()
-            book["source"] = 'dangdang'
+            book["source"] = '当当'
             book_a = li.xpath("./p[@class='name']/a")
             if len(book_a) > 0:
                 book_a = book_a[0] #图书的a标签

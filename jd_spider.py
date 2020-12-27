@@ -26,10 +26,9 @@ class JdSpider:
         content_list = list()
         for li in li_list:  # 遍历每个商品
             book = dict()
-            book["source"] = 'jd'
+            book["source"] = '京东'
             #标题
             book["title"] = li.xpath(".//div[contains(@class,'p-name')]/a/em/text()")
-            print(book["title"])
             book["title"] = book["title"][0] if len(book["title"]) > 0 else None
             #购买链接
             book["link"] = li.xpath(".//div[@class='p-name']/a/@href")
