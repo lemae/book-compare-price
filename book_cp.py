@@ -1,5 +1,6 @@
 from dangdang_spider import DangdangSpider
 from jd_spider import JdSpider
+from taobao_spider import TaobaoSpider
 
 # 图书比价
 def compare_price(isbn):
@@ -10,6 +11,11 @@ def compare_price(isbn):
     #京东
     jd = JdSpider()
     result_list += jd.run(isbn)
+
+    #淘宝
+    taobao = TaobaoSpider()
+    result = taobao.run(isbn)
+    if result: result_list += result
 
     # 按价格排序,从低到高
     result_list.sort(key=lambda book: float(book['price']))
